@@ -1,0 +1,517 @@
+@media (min-width:1400px) {
+  .location-bbtn {
+    margin: 0;
+    display: flex;
+  }
+
+  .seafood .banner-meat .mushroom-offer .mushroom {
+    margin: 10px;
+    width: 500px;
+  }
+
+  .seafood .feature-blog .feature-products .slick-wrapper3 .slide-item3 .box01 .product-img {
+    width: 329px;
+    height: 168px
+  }
+
+  .blog-details .blog-box .blog-box01,
+  .blog-details .blog-box .blog-box01 .blog-img img {
+    width: 260px;
+    height: 260px;
+  }
+
+  .blog-detail-image .blog-image-contain {
+    position: absolute;
+    bottom: 15px;
+  }
+
+  .blog-detail-image .blog-image-contain h2 {
+    font-size: 38px;
+    color: black;
+    font-weight: 600;
+  }
+  /* .getting-started .box001 {
+    width: 370px;
+  } */
+  .blog-grid-box .blog-image #img-blog-list {
+    width: 700px;
+  }
+}
+
+@media (max-width:1399px) {
+  .banner .home-img {
+    padding: 150px 20px;
+
+  }
+
+  .location-bbtn {
+    margin-left: 20px;
+  }
+
+  .navigation .nav-02 nav ul li a {
+    font-size: 14px;
+  }
+
+  .deal-2,
+  .deal-3,
+  .deal-4 {
+    margin: 0 5px;
+  }
+
+  .seafood .banner-meat .mushroom-offer .mushroom {
+    margin: 10px 10px;
+    width: 400px;
+  }
+
+  .seafood .summry {
+    margin: 0px 10px;
+    padding: 40px 0;
+    width: 230px;
+  }
+
+  .seafood .feature-blog .feature-products .slick-wrapper3 .slide-item3 .box01 .product-img {
+    width: 300px;
+    height: 168px
+  }
+
+  .fresh-vegetable .img-section .fresh-img01 img {
+    width: 270px;
+    height: 500px;
+  }
+
+  .people-review .review-member .review-box {
+    width: 380px;
+  }
+
+  .blog-details .blog-box .blog-box01,
+  .blog-details .blog-box .blog-box01 .blog-img img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .blog-detail-image .blog-image-contain {
+    position: absolute;
+    bottom: 15px;
+  }
+
+  .blog-detail-image .blog-image-contain h2 {
+    font-size: 35px;
+    color: black;
+    font-weight: 600;
+  }
+
+  /* .getting-started .box001 {
+    width: 320px;
+  } */
+  .blog-grid-box .blog-image #img-blog-list {
+    width: 600px;
+    height: 257px;
+  }
+}
+
+@media (max-width:1199px) {
+  .nav-02 nav ul li a {
+    font-size: 14px;
+  }
+
+  .banner .off-45 {
+    margin: 0px 0 10px 0;
+  }
+
+  .deal-2,
+  .deal-3,
+  .deal-4 {
+    margin: 0 5px;
+  }
+
+  .seafood .banner-meat .mushroom-offer .mushroom {
+    margin: 10px 10px;
+    width: 380px;
+  }
+
+  .seafood .cash {
+    margin: 0 0 0 20px;
+  }
+
+  .seafood .feature-blog .feature-products .slick-wrapper3 .slide-item3 .box01 .product-img {
+    width: 250px;
+    height: 176px
+  }
+
+  .fresh-vegetable .img-section {
+    display: flex;
+    justify-content: center;
+  }
+
+  .fresh-vegetable .img-section .fresh-img01 img {
+    width: 268px;
+    height: 500px;
+  }
+
+  .people-review .review-member .review-box {
+    width: 300px;
+  }
+
+  .blog-details .blog-box .blog-box01,
+  .blog-details .blog-box .blog-box01 .blog-img img {
+    width: 240px;
+    height: 240px;
+  }
+
+  .blog-detail-image .blog-image-contain {
+    position: absolute;
+    bottom: 20px;
+  }
+
+  .blog-detail-image .blog-image-contain h2 {
+    font-size: 25px;
+    color: black;
+    font-weight: 600;
+  }
+
+  .blog-details-quote {
+    padding: 10px 10px 10px 90px;
+  }
+
+  .blog-details-quote i {
+    left: 15px;
+    font-size: 75px;
+  }
+
+  .cart-product .cart-total-right {
+    margin: 20px 0;
+  }
+
+  .forgot01 .forgot-content .forgot-data {
+    margin: 0;
+  }
+
+  .login-content .log-content .log-in-data {
+    margin: 0 auto;
+  }
+  .blog-grid-box .blog-image #img-blog-list {
+    width: 500px;
+    height: 210px;
+  }
+  .blog-grid-box .blog-image #img-blog-list {
+    width: 600px;
+    height: 257px;
+  }
+.browse-category img{
+    width: 100px;
+  }
+}
+
+@media (max-width:991px) {
+
+  .banner .off-45 .off-content,
+  .banner .healthy-food .healthy-content {
+    padding: 15px 10px;
+    /* width: 100%; */
+  }
+
+  .banner .off-45,
+  .healthy-food {
+    margin: 10px;
+  }
+
+  .seafood .banner-meat .mushroom-offer .mushroom {
+    margin: 10px 10px;
+    width: 400px;
+  }
+
+  .cash {
+    width: 750px;
+  }
+
+  .seafood .get-ready .ready {
+    margin: 10px;
+    padding: 10px;
+    width: 550px;
+  }
+
+  .seafood .summry {
+    margin: 10px;
+    /* padding: 10px; */
+    width: 230px;
+  }
+
+  .seafood .feature-blog .feature-products .slick-wrapper3 .slide-item3 .box01 .product-img {
+    width: 259px;
+    height: 168px
+  }
+
+  .success-total-right {
+    margin: 20px;
+  }
+
+  .fresh-vegetable .img-section {
+    display: flex;
+    justify-content: center;
+  }
+
+  .fresh-vegetable .img-section .fresh-img01 img {
+    width: 302px;
+    height: 450px;
+  }
+
+  .people-review .review-member .review-box {
+    width: 370px;
+  }
+
+  .blog-details .blog-box .blog-box01,
+  .blog-details .blog-box .blog-box01 .blog-img img {
+    width: 350px;
+    height: 350px;
+  }
+
+  .blog-detail-image .blog-image-contain {
+    position: absolute;
+    bottom: 20px;
+  }
+
+  .blog-detail-image .blog-image-contain h2 {
+    font-size: 30px;
+    color: black;
+    font-weight: 600;
+  }
+
+  .cart-product .cart-total-right {
+    margin: 20px 0;
+  }
+
+  .forgot01 .forgot-content .forgot-data {
+    margin: 0 auto;
+  }
+
+  .login-content .log-content .log-in-data {
+    margin: 0 auto;
+  }
+
+  .otp-content .otp02-content .otp-data {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width:767px) {
+
+  .banner .off-45 .off-content,
+  .banner .healthy-food .healthy-content {
+    padding: 15px 10px;
+    width: 100%;
+  }
+
+  .banner .off-45,
+  .healthy-food {
+    margin: 10px;
+  }
+
+  .banner .healthy-food .healthy-content h6 {
+    font-size: 25px;
+  }
+
+  .seafood .banner-meat .mushroom-offer .mushroom {
+    margin: 10px 0;
+    width: 500px;
+  }
+
+  .cash {
+    width: 500px;
+  }
+
+  .seafood .get-ready .ready {
+    margin: 10px;
+    padding: 10px;
+    width: 500px;
+  }
+
+  .seafood .summry {
+    margin: 10px 0;
+    padding: 10px;
+    width: 500px;
+  }
+
+  .seafood .feature-blog .feature-products .slick-wrapper3 .slide-item3 .box01 .product-img {
+    width: 265px;
+    height: 201px;
+  }
+
+  .newsletter .news-letter-banner .news .input-group {
+    width: 340px;
+  }
+
+  .success-total-right {
+    margin: 20px;
+  }
+
+  .fresh-vegetable .img-section .fresh-img01 img {
+    width: 270px;
+    height: 290px;
+  }
+
+  .fresh-vegetable .img-section {
+    display: flex;
+    justify-content: center;
+  }
+
+  .fresh-vegetable .img-section .fresh-img01 img {
+    width: 280px;
+    height: 290px;
+  }
+
+  .people-review .review-member .review-box {
+    width: 600px;
+  }
+
+  .blog-details .blog-box .blog-box01,
+  .blog-details .blog-box .blog-box01 .blog-img img {
+    width: 500px;
+    height: 500px;
+  }
+
+  .blog-detail-image .blog-image-contain {
+    position: absolute;
+    bottom: 0px;
+  }
+
+  .blog-detail-image .blog-image-contain h2 {
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+  .cart-product .cart-total-right {
+    margin: 20px 0;
+  }
+
+  .forgot01 .forgot-content .forgot-data {
+    margin: 0 auto;
+  }
+
+  .login-content .log-content .log-in-data {
+    margin: 0 auto;
+  }
+
+  .otp-content .otp02-content .otp-data {
+    margin: 0 auto;
+  }
+  .blog-grid-box .blog-image #img-blog-list {
+    /* width: 600px; */
+    height: 278px;
+  }
+
+}
+
+@media (max-width:575px) {
+  .banner .home-img {
+    padding: 50px 20px;
+    margin: 10px 0;
+  }
+
+  .banner-data h1 {
+    font-size: 20px;
+  }
+
+  .banner-2 {
+    margin: 10px;
+  }
+
+  .payment img {
+    margin: 0 auto;
+  }
+
+  .log-content {
+    margin: 0 auto;
+  }
+
+  .banner .healthy-food {
+    margin: 20px 0;
+  }
+
+  .banner .healthy-food .healthy-content h6 {
+    font-size: 26px;
+  }
+
+  .seafood .banner-meat .mushroom-offer .mushroom {
+    margin: 10px 0;
+    width: 500px;
+  }
+
+  .cash {
+    width: 500px;
+  }
+
+  .seafood .get-ready .ready {
+    margin: 10px;
+    width: 500px;
+  }
+
+  .seafood .summry {
+    margin: 10px 0;
+    width: 500px;
+  }
+
+  .seafood .feature-blog .feature-products .slick-wrapper3 .slide-item3 .box01 .product-img {
+    width: 450px;
+    height: 298px
+  }
+
+  .newsletter .news-letter-banner {
+    padding: 35px 20px 35px 50px;
+  }
+
+  .newsletter .news-letter-banner .news .input-group {
+    width: 340px;
+  }
+
+  .success-total-right {
+    margin: 20px;
+  }
+
+  .fresh-vegetable .img-section .fresh-img01 img {
+    width: 250px;
+    height: 290px;
+  }
+
+  .fresh-vegetable .img-section {
+    display: flex;
+    justify-content: center;
+  }
+
+  .blog-details .blog-box .blog-box01,
+  .blog-details .blog-box .blog-box01 .blog-img img {
+    width: 500px;
+    height: 500px;
+  }
+
+  .blog-detail-image .blog-image-contain {
+    position: absolute;
+    bottom: 0px;
+  }
+
+  .blog-detail-image .blog-image-contain h2 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .blog-details-quote {
+    padding: 10px 10px 10px 30px;
+  }
+
+  .cart-product .table-body .cart-table .table {
+    width: 180px;
+    height: 90px;
+
+  }
+
+  .cart-product .cart-total-right {
+    margin: 20px 0;
+  }
+
+  .login-content .log-content .log-in-data {
+    margin: 0 auto;
+  }
+
+  .otp-content .otp02-content .otp-data {
+    margin: 0 auto;
+  }
+}

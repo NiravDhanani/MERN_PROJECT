@@ -1,0 +1,38 @@
+:root {
+    --sans: 'Public Sans';
+    --exo: 'Exo 2';
+    --russo: 'Russo One';
+    --script: 'Kaushan Script';
+    --primary-color: #0da487;
+    --secondary-color: #4a5568;
+    --black-color: #222222;
+    --white-color: #ffffff;
+    --white-100: #F8F8F8;
+    --border-color: #ececec;
+    --red-color-100: #ff4f4f;
+    --red-color-200: #ff7272;
+    --red-color-300: #ff6b6b;
+    --orange-color: #ffa53b;
+    --btn-gradient: linear-gradient(90deg, #ff7272 0%, #ff4f4f 100%);
+    --fs-12: 12px;
+    --fs-14: 14px;
+    --fs-15: 15px;
+    --fs-16: 16px;
+    --fs-18: 18px;
+    --fs-20: 20px;
+    --fs-22: 22px;
+    --fs-24: 24px;
+    --fs-26: 26px;
+    --fs-28: 28px;
+    --fs-38: 38px;
+    --fs-42: 42px;
+}
+.sans{
+    font-family: var(--sans);
+}
+.{
+    text-decoration: none;
+}
+.container{
+    max-width: 1620px !important;
+}

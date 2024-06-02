@@ -1,0 +1,144 @@
+
+.footer {
+    background-image: url(../img/footer-shape.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #F8F8F8;
+    padding: 50px 0 0 0;
+  }
+  .footer .logistic {
+    border-bottom: 1px dashed #c1c1c1;
+    padding: 0px 0 30px 0;
+  }
+  .footer .logistic .service-box .servics-img {
+    width: 38px;
+  }
+  .footer .logistic .service-box .servic-details h5 {
+    padding: 5px 25px 5px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    border-right: 1px #9b9bb4;
+  }
+  .footer .service-sector {
+    padding: 45px 0;
+    border-bottom: 1px dashed #9b9bb4;
+  }
+  .footer-logo img {
+    width: 200px;
+    height: 60px;
+    padding: 0 0 10px 0;
+  }
+  .footer-items{
+     color: #222222;
+     text-decoration: none;
+  }
+  .footer .service-sector .service-info1 {
+    color: #000000;
+  }
+  .footer .service-sector .service-info1 h4 {
+    font-size: 18px;
+    color: #222222;
+  }
+  .footer .service-sector .service-info1 p {
+    padding: 10px 0;
+  }
+  .footer .service-sector .service-info1 ul li {
+    font-size: 16px;
+  }
+ 
+  .footer .service-sector .footer-content ul li .footer-number .contact-01 {
+    padding: 3px 10px;
+  }
+  .footer .service-sector .footer-content ul li .footer-number .contact-01 h5 {
+    font-size: 14px;
+  }
+  .footer .service-sector .footer-content ul li .footer-number .contact-01 h6 {
+    font-size: 15px;
+    color: #222222;
+  }
+  .footer .service-sector .footer-content ul .footer-info h4 {
+    font-size: 15px;
+  }
+  .footer .service-sector .footer-content ul .footer-info ul li {
+    padding: 0 10px;
+  }
+  .footer .service-sector .footer-content ul .footer-info ul li a img {
+    width: 130px;
+  }
+  .footer .service-sector .service-info {
+    color: #4a5568;
+  }
+  .footer .service-sector .service-info h4 {
+    font-size: 18px;
+    color: #222222;
+  }
+  .footer .service-sector .service-info p {
+    padding: 10px 0;
+  }
+  .footer .service-sector .service-info ul li {
+    transition: all 0.5s;
+  }
+  .footer .service-sector .service-info ul li:hover {
+    transform: translateX(5px);
+    list-style-type: disc;
+  }
+  .footer .service-sector .service-info ul li:hover > a {
+    color: #0da487;
+  }
+  .footer .service-sector .service-info ul li a {
+    font-size: 16px;
+    position: relative;
+  }
+  .footer .service-sector .service-info ul li a::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+    background-color: #0da487;
+    z-index: 1;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .footer .service-sector .service-info ul li:hover > a::after {
+    width: 100%;
+  }
+  .footer .service-sector .service-info .footer-content ul li .footer-number .contact-number i {
+    font-size: 20px;
+  }
+  .footer .service-sector .service-info .footer-content ul li .footer-number .contact-01 {
+    padding: 3px 10px;
+  }
+  .footer .service-sector .service-info .footer-content ul li .footer-number .contact-01 h5 {
+    font-size: 14px;
+  }
+
+  .footer .service-sector .service-info .footer-content ul .footer-info h4 {
+    font-size: 15px;
+  }
+  .footer .service-sector .service-info .footer-content ul .footer-info ul li {
+    padding: 0 10px;
+  }
+  .footer .service-sector .service-info .footer-content ul .footer-info ul li a img {
+    width: 130px;
+  }
+  .footer .foot-service {
+    padding: 20px;
+  }
+  .text-content{
+    padding-top: 10px;
+  }
+  .footer .foot-service .text-content ul li {
+    padding: 0 5px;
+    transition: all 0.5s;
+    font-size: 16px;
+  }
+
+  .footer .foot-service .text-content ul li:hover {
+    transform: translateY(-5px);
+    color: #0da487;
+  }
+
+  

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/public/img/Fevicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fresh Mart</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+  <link rel="stylesheets" href="./public/css/fonts.css">
+  <link rel="stylesheets" href="'./public/css/style.css">
+  <link rel="stylesheets" href="'./public/css/slick.css">
+
+  <link rel="stylesheets" href="'./public/css/media.css">
+
+</head>
+
+<body style>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
+
+
+  <script>
+    $(document).ready(function () {
+      var changebox = $(".changebox");
+      var firstclone = changebox.children(":first").clone();
+      changebox.append(firstclone);
+
+      var fsstr = changebox.parent().css("font-size");
+      var fs = parseInt(fsstr);
+
+      changebox.css("height", "21px");
+      ChangeSize(0);
+      var intervalId = setInterval(Next, 2000);
+      var isHovered = false;
+
+      changebox.on("mouseenter", function () {
+        clearInterval(intervalId);
+        isHovered = true;
+      });
+
+      changebox.on("mouseleave", function () {
+        if (isHovered) {
+          intervalId = setInterval(Next, 2000);
+          isHovered = false;
+        }
+      });
+
+      function Next() {
+        if (typeof Next.i === 'undefined') {
+          Next.i = 0;
+        }
+        Next.i++;
+        if (Next.i === changebox.children("span").length) {
+          Next.i = 1;
+          changebox.scrollTop(0);
+        }
+        changebox.animate({ scrollTop: (fs * Next.i) + Next.i * 5 + 3 }, 500);
+        setTimeout(function () {
+          ChangeSize(Next.i);
+        }, 500);
+      }
+
+      function ChangeSize(i) {
+        var word = changebox.children("span").eq(i);
+        var wordsize = 1000;
+        changebox.css("width", wordsize);
+      }
+    });
+
+  </script>
+  <!-- slick slider  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,256 @@
+.login-pade-head01 {
+    padding: 10px 0;
+  }
+  .login-pade-head01 .login-pade-head {
+    background-color: #F8F8F8;
+  }
+  .login-pade-head01 .login-pade-head .login01 {
+    padding: 25px 0;
+  }
+  .login-pade-head01 .login-pade-head .login01 h4 {
+    font-size: 20px;
+    font-weight: 800;
+  }
+  .login-pade-head01 .login-pade-head .login01 span a,
+  .login-pade-head01 .login-pade-head .login01 span i,
+  .login-pade-head01 .login-pade-head .login01 span p {
+    font-size: 16px;
+    color: #222222;
+    margin: 0;
+  }
+  
+  .login-content {
+    background-image: url(../img/log-in-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .login-content .log-content {
+    padding: 80px 0;
+  }
+  .login-content .log-content .img-contain {
+    justify-content: center;
+    display: flex;
+    -webkit-box-align: center;
+    padding: 150px 0 0 0;
+  }
+  .login-content .log-content .img-contain-error {
+    justify-content: center;
+    display: flex;
+    -webkit-box-align: center;
+    padding: 0px 0 0 0;
+  }
+  .login-content .log-content .error-404 .error-content {
+    padding: 20px 60px;
+    text-align: center;
+    color: #4a5568;
+  }
+  .login-content .log-content .error-404 button {
+    margin: 0 auto;
+    background-color: #0da487;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 7px;
+  }
+  .login-content .log-content .error-404 button a {
+    color: #ffffff;
+  }
+  .login-content .log-content .log-in-data {
+    background-color: #F8F8F8;
+    border-radius: 8px;
+    padding: 35px 10px;
+  }
+  .login-content .log-content .log-in-data .log-in-box {
+    padding: 20px 4 0px;
+  }
+  .login-content .log-content .log-in-data .log-in-box .login-title {
+    padding: 10px 0;
+  }
+  .login-content .log-content .log-in-data .log-in-box .login-title h4 {
+    font-size: 20px;
+  }
+  .login-content .log-content .log-in-data .log-in-box .login-title h3 {
+    font-size: 18px;
+    color: #4a5568;
+  }
+  .login-content .log-content .log-in-data .log-in-box .login-email,
+  .login-content .log-content .log-in-data .log-in-box .password {
+    padding: 5px 0;
+  }
+  .login-content .log-content .log-in-data .log-in-box .login-email input,
+  .login-content .log-content .log-in-data .log-in-box .password input {
+    padding: 10px 20px;
+    outline: none;
+    border: 1px solid #DDD;
+    border-radius: 7px;
+  }
+  .login-content .log-content .log-in-data .log-in-box .login-email input ::-moz-placeholder, .login-content .log-content .log-in-data .log-in-box .password input ::-moz-placeholder {
+    color: #4a5568;
+  }
+  .login-content .log-content .log-in-data .log-in-box .login-email input ::placeholder,
+  .login-content .log-content .log-in-data .log-in-box .password input ::placeholder {
+    color: #4a5568;
+  }
+  .login-content .log-content .log-in-data .log-in-box .forgetbox {
+    padding: 15px 0;
+  }
+  .login-content .log-content .log-in-data .log-in-box .forgetbox a {
+    color: #0da487;
+  }
+  .login-content .log-content .log-in-data .log-in-box .forgetbox .remember input {
+    outline: none;
+    border: none;
+    border-radius: 7px;
+  }
+  .login-content .log-content .log-in-data .log-in-box .forgetbox .terrms .check-box {
+    padding: 10px;
+    border: 1px solid #DDD;
+  }
+  .login-content .log-content .log-in-data .log-in-box .forgetbox .terrms label span {
+    color: #0da487;
+  }
+  .login-content .log-content .log-in-data .log-in-box .button-login button {
+    padding: 14px 32px;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #ff7272 0%, #ff4f4f 100%);
+    color: #ffffff;
+    transition: all 0.5s;
+  }
+  .login-content .log-content .log-in-data .log-in-box .button-login button a {
+    color: #ffffff;
+  }
+  .login-content .log-content .log-in-data .log-in-box .button-login button:hover {
+    background: linear-gradient(90deg, #ff4f4f 0%, #ff7272 100%);
+  }
+  .login-content .log-content .log-in-data .log-in-box .google {
+    padding: 20px 0;
+  }
+  .login-content .log-content .log-in-data .log-in-box .google h6 {
+    position: relative;
+  }
+  .login-content .log-content .log-in-data .log-in-box .google h6::before {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 2px;
+    top: 49%;
+    left: 0;
+    background-color: #DDD;
+  }
+  .login-content .log-content .log-in-data .log-in-box .google h6::after {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 2px;
+    top: 49%;
+    right: 0;
+    background-color: #DDD;
+  }
+  @media (max-width : 1200px) {
+    .login-content .log-content .log-in-data .log-in-box .google h6::before {
+        position: absolute;
+        content: "";
+        width: 120px;
+        height: 2px;
+        top: 49%;
+        left: 0;
+        background-color: #DDD;
+      }
+      .login-content .log-content .log-in-data .log-in-box .google h6::after {
+        position: absolute;
+        content: "";
+        width: 120px;
+        height: 2px;
+        top: 49%;
+        right: 0;
+        background-color: #DDD;
+      }
+  }
+ 
+  .login-content .log-content .log-in-data .log-in-box .google .google-img {
+    padding: 10px 0;
+    margin: 10px 0;
+    background-color: #ffffff;
+    border-radius: 7px;
+    position: relative;
+  }
+  .login-content .log-content .log-in-data .log-in-box .google .google-img h4 {
+    font-size: 15px;
+    align-items: center;
+    display: flex;
+    margin: 0;
+  }
+  .login-content .log-content .log-in-data .log-in-box .google .google-img img {
+    width: 22px;
+    margin: 5px;
+  }
+  .login-content .log-content .log-in-data .log-in-box .sign-up-form {
+    padding: 20px;
+    border-top: 1px solid #DDD;
+  }
+  .login-content .log-content .log-in-data .log-in-box .sign-up-form a {
+    color: #0da487;
+  }
+  
+.forgot01 {
+    background-image: url(../img/log-in-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .forgot01 .forgot-content {
+    padding: 80px 0;
+  }
+  .forgot01 .forgot-content .img-contain {
+    justify-content: center;
+    display: flex;
+    -webkit-box-align: center;
+  }
+  .forgot01 .forgot-content .forgot-data {
+    background-color: #F8F8F8;
+    border-radius: 8px;
+    padding: 35px 10px;
+  }
+  .forgot01 .forgot-content .forgot-data .forgot-box {
+    padding: 10px 4 0px;
+  }
+  .forgot01 .forgot-content .forgot-data .forgot-box .forgot-title {
+    padding: 0px 0;
+  }
+  .forgot01 .forgot-content .forgot-data .forgot-box .forgot-title h4 {
+    font-size: 20px;
+  }
+  .forgot01 .forgot-content .forgot-data .forgot-box .forgot-title h3 {
+    font-size: 18px;
+    color: #4a5568;
+  }
+  .forgot01 .forgot-content .forgot-data .forgot-box .forgot-email {
+    padding: 10px 0;
+  }
+  .forgot01 .forgot-content .forgot-data .forgot-box .forgot-email input {
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+  }
+  .forgot01 .forgot-content .forgot-data .forgot-box .forgot-email input ::-moz-placeholder {
+    color: #4a5568;
+  }
+  .forgot01 .forgot-content .forgot-data .forgot-box .forgot-email input ::placeholder {
+    color: #4a5568;
+  }
+  .forgot01 .forgot-content .forgot-data .forgot-box .button-login {
+    padding: 10px 0 0 0;
+  }
+  .forgot01 .forgot-content .forgot-data .forgot-box .button-login button {
+    padding: 14px 32px;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #ff7272 0%, #ff4f4f 100%);
+    color: #ffffff;
+    transition: all 0.5s;
+    padding: 10px 15px;
+  }
