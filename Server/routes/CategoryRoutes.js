@@ -8,6 +8,6 @@ const category = require('../controller/CategoryController')
 
 route.post('/createcategory',upload,category.CreaterCategory)
 route.get('/viewcategory',category.viewCategory)
-route.get('/deleteCategory',category.deleteCategory)
+route.delete('/deleteCategory',category.deleteCategory)
 
 module.exports = route; 
