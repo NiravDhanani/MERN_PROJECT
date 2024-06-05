@@ -7,7 +7,6 @@ const CatData = mongoose.Schema({
     },
     cat_icon : {
         type : String,
-        require : true
     },
     public_id : {
         type : String,

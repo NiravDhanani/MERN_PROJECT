@@ -15,7 +15,7 @@ const CreaterCategory = async (req, res) => {
     return res.status(200).send({
       success: true,
       message: "Category Created",
-      cat
+      cat,
     });
   } catch (err) {
     return res.status(503).send({
@@ -44,27 +44,26 @@ const viewCategory = async (req, res) => {
 
 const deleteCategory = async (req, res) => {
   try {
-    const id = req.query.id
-    if(!id){
+    const id = req.query.id;
+    if (!id) {
       return res.status(400).send({
-        success : false,
-        message : "id not get"
-      })
+        success: false,
+        message: "id not get",
+      });
     }
-    const del = await Category.findById(id)
-    if(!del){
+    const del = await Category.findById(id);
+    if (!del) {
       return res.status(400).send({
-        success : false,
-        message : "data not Found"
-      })
+        success: false,
+        message: "data not Found",
+      });
     }
-    let cloud =  await cloudinary.uploader.destroy(del.public_id)
-    await Category.findByIdAndDelete(id)
+    let cloud = await cloudinary.uploader.destroy(del.public_id);
+    await Category.findByIdAndDelete(id);
     return res.status(200).send({
-      success : true,
-      message : "Category Delete Successfully",
-    })
-  
+      success: true,
+      message: "Category Delete Successfully",
+    });
   } catch (err) {
     return res.status(503).send({
       success: false,
@@ -73,42 +72,65 @@ const deleteCategory = async (req, res) => {
   }
 };
 
+const editCategory = async (req, res) => {
+  try {
+    let id = req.query.id;
+    let single = await Category.findById(id);
+    return res.status(200).send({
+      success: true,
+      message: "Category ready to edit",
+      single,
+    });
+  } catch (err) {
+    return res.status(503).send({
+      success: false,
+      message: " category id not found",
+    });
+  }
+};
 
-// const deleteCategory = async (req, res) => {
-//   try {
-//     const { id } = req.query;
-//     if (!id) {
-//       return res.status(400).send({
-//         success: false,
-//         message: "Missing required parameter - id",
-//       });
-//     }
+const updateCategory = async (req, res) => {
+  try {
+    let id = req.query.id;
+    let single = await Category.findById(id);
 
-//     const categoryToDelete = await Category.findById(id);
-//     if (!categoryToDelete) {
-//       return res.status(404).send({
-//         success: false,
-//         message: "Category not found",
-//       });
-//     }
+    if (req.file) {
+      await cloudinary.uploader.destroy(single.public_id);
+      let image = await cloudinary.uploader.upload(req.file.path);
+      await Category.findByIdAndUpdate(id, {
+        category: req.body.category,
+        cat_icon: image.secure_url,
+        public_id: image.public_id,
+      });
+      return res.status(200).send({
+        success: true,
+        message: "category successfully update",
+      });
+    } else {
+      await Category.findByIdAndUpdate(id, {
+        category: req.body.category,
+        cat_icon: single.secure_url,
+        public_id: single.public_id,
+      });
+      return res.status(200).send({
+        success: true,
+        message: "category successfully update",
+      });
+    }
 
-//     await cloudinary.uploader.destroy(categoryToDelete.public_Id);
-//     await Category.findByIdAndDelete(id);
-
-//     return res.status(200).send({
-//       success: true,
-//       message: "Category deleted successfully",
-//     });
-//   } catch (err) {
-//     return res.status(503).send({
-//       success: false,
-//       message: err.message,
-//     });
-//   }
-// };
+    return res.send(single);
+  } catch (err) {
+    return res.status(503).send({
+      success: false,
+      message: err.message,
+    });
+  }
+};
 
 module.exports = {
   CreaterCategory,
   viewCategory,
   deleteCategory,
+  editCategory,
+  updateCategory,
 };
