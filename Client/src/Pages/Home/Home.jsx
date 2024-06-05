@@ -9,6 +9,8 @@ import Card from "react-bootstrap/Card";
 import "./Home.css";
 import { Link } from "react-router-dom";
 import { IoMailSharp } from "react-icons/io5";
+import { Header } from "../../Components/Header/Header";
+import { Footer } from "../../Components/Footer/Footer";
 export const Home = () => {
   // Deal slide 1
   const loadSlick = () => {
@@ -56,8 +58,6 @@ export const Home = () => {
       });
     }
   };
-  
-
   const browseSlider = () => {
     if (typeof window !== "undefined" && window.$) {
       $(".browse-slider").slick({
@@ -157,7 +157,8 @@ export const Home = () => {
 
   return (
     <>
-      {/* <ToastContainer/>    */}
+    <Header/>
+
       {/* <!-- banner start ============================================= --> */}
       <section className="banner py-5">
         <div className="container">
@@ -1031,6 +1032,7 @@ export const Home = () => {
         </div>
       </section>
       {/* <!-- fotter section ==================================================================== -- */}
+      <Footer/>
     </>
   );
 };

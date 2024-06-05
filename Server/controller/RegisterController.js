@@ -11,7 +11,7 @@ const RegisterData = async (req, res) => {
       name,
       email,
       password: hashPassword,
-      role : "customer"
+      role: "customer",
     });
     console.log(user);
     return res.status(201).send({
@@ -63,7 +63,23 @@ const LoginUser = async (req, res) => {
   }
 };
 
+const ValidateToken = (req, res) => {
+  try {
+    return res.send({
+      success: true,
+      message: "Token is valid",
+      data: req.user,   
+    });
+  } catch (err) {
+    return res.status(500).send({
+      success: false,
+      message: new err.message(),
+    });
+  }
+};
+
 module.exports = {
   RegisterData,
   LoginUser,
+  ValidateToken,
 };

@@ -1,6 +1,10 @@
+import { Footer } from "../../Components/Footer/Footer";
+import { Header } from "../../Components/Header/Header";
+
 export const Cart = () => {
   return (
     <>
+    <Header/>
       <div>
         <section className="cart-page-head01">
           <section className="otp-page-head">
@@ -319,6 +323,7 @@ export const Cart = () => {
           </div>
         </section>
       </div>
+    <Footer/>
     </>
   );
 };

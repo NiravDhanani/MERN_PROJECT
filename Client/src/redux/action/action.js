@@ -60,12 +60,11 @@ export const Login_User = (obj,login,setLogin,navigate) => {
         }else{
           navigate('/')
         }
-        localStorage.setItem('Login',JSON.stringify(data))
+        localStorage.setItem('Login',JSON.stringify(data),true)
         dispatch({
           type : "loginuser",
           payload : data
         })
-        
         return data
       } else{
         toast.error("email or password may wrong")

@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import { toast } from "react-toastify";
 import './Home.css'
+import { Header } from "../../Components/Header/Header";
 export const Dashboard = () => {
-  useEffect(() => {
-    toast.success("Welcom Home Page");
-  }, []);
+
 
   return (
     <>
+    <Header/>
     <h1>Dashboard</h1>
     </>
   );

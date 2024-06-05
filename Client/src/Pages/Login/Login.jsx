@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../Register/Register.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -29,9 +29,14 @@ export const Login = () => {
     } catch (err) {
       toast.error("Errorn Pleas try again later");
       return false;
-    }
+    }   
   };
-
+  useEffect(()=>{
+    let login = localStorage.getItem('Login')
+    if(!login){
+      navigate('/login')
+    }
+  },[])
   return (
     <>
       <ToastContainer />

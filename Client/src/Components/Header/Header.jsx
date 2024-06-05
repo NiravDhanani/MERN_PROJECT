@@ -23,60 +23,18 @@ import { RiLogoutBoxLine } from "react-icons/ri";
 import CloseButton from "react-bootstrap/CloseButton";
 import "./Header.css";
 // import { useLoginAuth } from "../../Context/LoginContext";
-import { useEffect, useState } from "react";
-import { toast } from "react-toastify";
+import { useState } from "react";
+import { FaRegUserCircle } from "react-icons/fa";
 
 export const Header = () => {
-  const [login, setLogin] = useState();
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
-  const validateToken = async (token) => {
-    try {
-      const response = await fetch("http://localhost:8222/v1/Api/validate-token", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${token}`
-        }
-      });
-      const data = await response.json();
-      return data.success;
-    } catch (err) {
-      console.log(`Token validation error: ${err}`);
-      return false;
-    }
-  };
-
-  let localToken = JSON.parse(localStorage.getItem("Login"));
-  useEffect(() => {
-
-    if (localToken && localToken?.token) {
-      validateToken(localToken?.token).then(isValid => {
-        if (isValid) {
-          setLogin({
-            user: localToken.userlogin,
-            token: localToken.token,
-          });
-        } else {
-          handleLogout();
-        }
-      });
-    } else {
-      handleLogout();
-    }
-  }, []); 
-
+let localToken = JSON.parse(localStorage.getItem("Login"));
+  
   const handleLogout = () => {
-
-    setLogin({
-      ...login,
-      user: null,
-      token: null,
-    });
     localStorage.removeItem("Login");
     navigate("/login");
   };
-
   return (
     <>
       <section className="top-bar">
@@ -230,6 +188,10 @@ export const Header = () => {
               <Nav.Link as={Link} to={"/blog"} className="navitem">
                 Blog
               </Nav.Link>
+              {localToken?.user?.role == "admin" ? ( <Nav.Link as={Link} to={"/dashboard"} className="navitem">
+                Admin
+              </Nav.Link>): ""}
+             
 
               <NavDropdown
                 title="User"
@@ -336,17 +298,17 @@ export const Header = () => {
                 <li>
                   <div className="User-box d-flex">
                     <div className="User-icon">
-                      {/* <FaRegUserCircle/> */}
-                      <img
+                      <FaRegUserCircle/>
+                      {/* <img
                         src="./public/img/user.jpg"
                         alt="user"
                         className="User-icon"
-                      ></img>
+                      ></img> */}
                     </div>
                     <div className="User-detail d-flex flex-column">
                       <span className="User-msg d-xxl-flex d-none">Hello,</span>
                       <span className="User-name d-xxl-flex d-none">
-                        Nirav Dhanani
+                        {localToken ? localToken?.user?.name : "User Name"}
                       </span>
                     </div>
                     <div className="dropDown-box">
