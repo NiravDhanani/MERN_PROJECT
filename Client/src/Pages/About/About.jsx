@@ -1,7 +1,62 @@
+import { useEffect } from "react";
 import { Footer } from "../../Components/Footer/Footer";
 import { Header } from "../../Components/Header/Header";
+import './About.css'
+import { FaFacebook } from "react-icons/fa6";
+import { FaPinterest } from "react-icons/fa";
+import { FaInstagramSquare } from "react-icons/fa";
+import { BsTwitter } from "react-icons/bs";
 
 export const About = () => {
+  const loadSlick = () => {
+    if (typeof window !== "undefined" && window.$) {
+      $(".slick4").slick({
+        rows: 1,
+        dots: false,
+        arrows: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 1290,
+            settings: {
+              slidesToShow: 3,
+            },
+          },
+          {
+            breakpoint: 1090,
+            settings: {
+              slidesToShow: 3,
+            },
+          },
+          {
+            breakpoint: 1000,
+            settings: {
+              slidesToShow: 2,
+            },
+          },
+          {
+            breakpoint: 880,
+            settings: {
+              slidesToShow: 2,
+            },
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 1,
+            },
+          },
+        ],
+      });
+    }
+  };
+
+  useEffect(()=>{
+    loadSlick()
+  },[])
   return (
     <>
       <Header />
@@ -38,7 +93,7 @@ export const About = () => {
                   <div className="img-section">
                     <div className="fresh-img01">
                       <img
-                        src="assets/img/about01.jpg"
+                        src="./public/img/about01.jpg"
                         style={{ borderRadius: "0 50px 0 50px" }}
                       />
                     </div>
@@ -48,7 +103,7 @@ export const About = () => {
                   <div className="img-section mt-4">
                     <div className="fresh-img01">
                       <img
-                        src="assets/img/about2.jpg"
+                        src="./public/img/about2.jpg"
                         style={{ borderRadius: "50px 0 50px 0" }}
                       />
                     </div>
@@ -75,25 +130,25 @@ export const About = () => {
                     <ul type="none">
                       <li>
                         <div className="delivery-box d-flex">
-                          <img src="assets/img/delivery (1).svg" />
+                          <img src="./public/img/delivery (1).svg" />
                           <h5 className="text">Free delivery for all orders</h5>
                         </div>
                       </li>
                       <li>
                         <div className="delivery-box d-flex">
-                          <img src="assets/img/delivery (1).svg" />
+                          <img src="./public/img/delivery (1).svg" />
                           <h5 className="text">Only fresh foods</h5>
                         </div>
                       </li>
                       <li>
                         <div className="delivery-box d-flex">
-                          <img src="assets/img/delivery (1).svg" />
+                          <img src="./public/img/delivery (1).svg" />
                           <h5 className="text">Free delivery for all orders</h5>
                         </div>
                       </li>
                       <li>
                         <div className="delivery-box d-flex">
-                          <img src="assets/img/delivery (1).svg" />
+                          <img src="./public/img/delivery (1).svg" />
                           <h5 className="text">Only fresh foods</h5>
                         </div>
                       </li>
@@ -169,13 +224,13 @@ export const About = () => {
                   <h6 className="text-center">Our Creative Team</h6>
                   <h3 className="text-center">Fastkart Team Member</h3>
                 </div>
-                <div className="team-member">
+                <div className="team-member ">
                   <div className="slick-wrapper1">
-                    <div id="slick4">
+                    <div className="slick4 d-flex">
                       <div className="slide-item1">
                         <div className="team-box align-content-center">
                           <div className="team-img">
-                            <img src="assets/img/women1.jpg" />
+                            <img src="./public/img/women1.jpg" />
                           </div>
                           <div className="team-name">
                             <h3 className="text-center">Anna Baranov</h3>
@@ -189,19 +244,16 @@ export const About = () => {
                               className="d-flex justify-content-center "
                             >
                               <li>
-                                <i
-                                  className="ri-facebook-circle-fill"
-                                  id="fb"
-                                />
+                              <FaFacebook id={"fb"} />
                               </li>
                               <li>
-                                <i className="ri-pinterest-line" id="pin" />
+                                <FaPinterest id={"pin"} />
                               </li>
                               <li>
-                                <i className="ri-twitter-fill" id="twit" />
+                                <BsTwitter id={"twit"} />
                               </li>
                               <li>
-                                <i className="ri-instagram-line" id="insta" />
+                                <FaInstagramSquare id={"insta"} />
                               </li>
                             </ul>
                           </div>
@@ -210,7 +262,7 @@ export const About = () => {
                       <div className="slide-item1">
                         <div className="team-box align-content-center">
                           <div className="team-img">
-                            <img src="assets/img/women.jpg" />
+                            <img src="./public/img/women.jpg" />
                           </div>
                           <div className="team-name">
                             <h3 className="text-center">Anna Baranov</h3>
@@ -224,19 +276,16 @@ export const About = () => {
                               className="d-flex justify-content-center "
                             >
                               <li>
-                                <i
-                                  className="ri-facebook-circle-fill"
-                                  id="fb"
-                                />
+                              <FaFacebook id={"fb"} />
                               </li>
                               <li>
-                                <i className="ri-pinterest-line" id="pin" />
+                                <FaPinterest id={"pin"} />
                               </li>
                               <li>
-                                <i className="ri-twitter-fill" id="twit" />
+                                <BsTwitter id={"twit"} />
                               </li>
                               <li>
-                                <i className="ri-instagram-line" id="insta" />
+                                <FaInstagramSquare id={"insta"} />
                               </li>
                             </ul>
                           </div>
@@ -245,7 +294,7 @@ export const About = () => {
                       <div className="slide-item1">
                         <div className="team-box align-content-center">
                           <div className="team-img">
-                            <img src="assets/img/man3.jpg" />
+                            <img src="./public/img/man3.jpg" />
                           </div>
                           <div className="team-name">
                             <h3 className="text-center">Anna Baranov</h3>
@@ -259,19 +308,16 @@ export const About = () => {
                               className="d-flex justify-content-center "
                             >
                               <li>
-                                <i
-                                  className="ri-facebook-circle-fill"
-                                  id="fb"
-                                />
+                              <FaFacebook id={"fb"} />
                               </li>
                               <li>
-                                <i className="ri-pinterest-line" id="pin" />
+                                <FaPinterest id={"pin"} />
                               </li>
                               <li>
-                                <i className="ri-twitter-fill" id="twit" />
+                                <BsTwitter id={"twit"} />
                               </li>
                               <li>
-                                <i className="ri-instagram-line" id="insta" />
+                                <FaInstagramSquare id={"insta"} />
                               </li>
                             </ul>
                           </div>
@@ -280,7 +326,7 @@ export const About = () => {
                       <div className="slide-item1">
                         <div className="team-box align-content-center">
                           <div className="team-img">
-                            <img src="assets/img/man4.jpg" />
+                            <img src="./public/img/man4.jpg" />
                           </div>
                           <div className="team-name">
                             <h3 className="text-center">Anna Baranov</h3>
@@ -294,19 +340,16 @@ export const About = () => {
                               className="d-flex justify-content-center "
                             >
                               <li>
-                                <i
-                                  className="ri-facebook-circle-fill"
-                                  id="fb"
-                                />
+                              <FaFacebook id={"fb"} />
                               </li>
                               <li>
-                                <i className="ri-pinterest-line" id="pin" />
+                                <FaPinterest id={"pin"} />
                               </li>
                               <li>
-                                <i className="ri-twitter-fill" id="twit" />
+                                <BsTwitter id={"twit"} />
                               </li>
                               <li>
-                                <i className="ri-instagram-line" id="insta" />
+                                <FaInstagramSquare id={"insta"} />
                               </li>
                             </ul>
                           </div>
@@ -315,7 +358,7 @@ export const About = () => {
                       <div className="slide-item1">
                         <div className="team-box align-content-center">
                           <div className="team-img">
-                            <img src="assets/img/women1.jpg" />
+                            <img src="./public/img/women1.jpg" />
                           </div>
                           <div className="team-name">
                             <h3 className="text-center">Anna Baranov</h3>
@@ -329,19 +372,16 @@ export const About = () => {
                               className="d-flex justify-content-center "
                             >
                               <li>
-                                <i
-                                  className="ri-facebook-circle-fill"
-                                  id="fb"
-                                />
+                              <FaFacebook id={"fb"} />
                               </li>
                               <li>
-                                <i className="ri-pinterest-line" id="pin" />
+                                <FaPinterest id={"pin"} />
                               </li>
                               <li>
-                                <i className="ri-twitter-fill" id="twit" />
+                                <BsTwitter id={"twit"} />
                               </li>
                               <li>
-                                <i className="ri-instagram-line" id="insta" />
+                                <FaInstagramSquare id={"insta"} />
                               </li>
                             </ul>
                           </div>
@@ -350,7 +390,7 @@ export const About = () => {
                       <div className="slide-item1">
                         <div className="team-box align-content-center">
                           <div className="team-img">
-                            <img src="assets/img/women.jpg" />
+                            <img src="./public/img/women.jpg" />
                           </div>
                           <div className="team-name">
                             <h3 className="text-center">Anna Baranov</h3>
@@ -364,19 +404,16 @@ export const About = () => {
                               className="d-flex justify-content-center "
                             >
                               <li>
-                                <i
-                                  className="ri-facebook-circle-fill"
-                                  id="fb"
-                                />
+                              <FaFacebook id={"fb"} />
                               </li>
                               <li>
-                                <i className="ri-pinterest-line" id="pin" />
+                                <FaPinterest id={"pin"} />
                               </li>
                               <li>
-                                <i className="ri-twitter-fill" id="twit" />
+                                <BsTwitter id={"twit"} />
                               </li>
                               <li>
-                                <i className="ri-instagram-line" id="insta" />
+                                <FaInstagramSquare id={"insta"} />
                               </li>
                             </ul>
                           </div>
@@ -401,8 +438,8 @@ export const About = () => {
               </div>
               <div className="review-member">
                 <div className="slick-wrapper1 ">
-                  <div id="slick5" className="w-100">
-                    <div className="slide-item1">
+                  <div className="w-100 slick4 d-flex">
+                    <div className="slide-item1 my-1">
                       <div className="review-box align-content-center">
                         <div className="client-data ">
                           <div className="cliant-icon">
@@ -420,7 +457,7 @@ export const About = () => {
                             They came in last at the Olympics!"
                           </p>
                           <div className="img-name d-flex">
-                            <img src="assets/img/man3.jpg" />
+                            <img src="./public/img/man3.jpg" />
                             <div className="name01">
                               <h4>Christopher R. Lee</h4>
                               <h6>Managing Director</h6>
@@ -450,7 +487,7 @@ export const About = () => {
                             They came in last at the Olympics!"
                           </p>
                           <div className="img-name d-flex">
-                            <img src="assets/img/man3.jpg" />
+                            <img src="./public/img/man3.jpg" />
                             <div className="name01">
                               <h4>Christopher R. Lee</h4>
                               <h6>Managing Director</h6>
@@ -480,7 +517,7 @@ export const About = () => {
                             They came in last at the Olympics!"
                           </p>
                           <div className="img-name d-flex">
-                            <img src="assets/img/man4.jpg" />
+                            <img src="./public/img/man4.jpg" />
                             <div className="name01">
                               <h4>Eileen R. Chu</h4>
                               <h6>Managing Director</h6>
@@ -510,7 +547,7 @@ export const About = () => {
                             They came in last at the Olympics!"
                           </p>
                           <div className="img-name d-flex">
-                            <img src="assets/img/women1.jpg" />
+                            <img src="./public/img/women1.jpg" />
                             <div className="name01">
                               <h4>Betty J. Turner</h4>
                               <h6>Managing Director</h6>
@@ -540,7 +577,7 @@ export const About = () => {
                             They came in last at the Olympics!"
                           </p>
                           <div className="img-name d-flex">
-                            <img src="assets/img/women.jpg" />
+                            <img src="./public/img/women.jpg" />
                             <div className="name01">
                               <h4>Constance K. Whang</h4>
                               <h6>Managing Director</h6>
@@ -570,7 +607,7 @@ export const About = () => {
                             They came in last at the Olympics!"
                           </p>
                           <div className="img-name d-flex">
-                            <img src="assets/img/man3.jpg" />
+                            <img src="./public/img/man3.jpg" />
                             <div className="name01">
                               <h4>Christopher R. Lee</h4>
                               <h6>Managing Director</h6>
@@ -600,11 +637,11 @@ export const About = () => {
               </div>
               <div className="blog-box">
                 <div className="slick-wrapper1 ">
-                  <div id="slick6" className="w-100">
+                  <div id="slick6" className="w-100 slick4 ">
                     <div className="slide-item1">
                       <div className="blog-box01 ">
                         <div className="blog-img ">
-                          <img src="assets/img/cream.jpg" />
+                          <img src="./public/img/cream.jpg" />
                         </div>
                       </div>
                       <h6>Farmart</h6>
@@ -613,7 +650,7 @@ export const About = () => {
                     <div className="slide-item1">
                       <div className="blog-box01 ">
                         <div className="blog-img ">
-                          <img src="assets/img/pack.jpg" />
+                          <img src="./public/img/pack.jpg" />
                         </div>
                       </div>
                       <h6>Farmart</h6>
@@ -622,7 +659,7 @@ export const About = () => {
                     <div className="slide-item1">
                       <div className="blog-box01 ">
                         <div className="blog-img ">
-                          <img src="assets/img/bottel.jpg" />
+                          <img src="./public/img/bottel.jpg" />
                         </div>
                       </div>
                       <h6>Farmart</h6>
@@ -631,7 +668,7 @@ export const About = () => {
                     <div className="slide-item1">
                       <div className="blog-box01 ">
                         <div className="blog-img ">
-                          <img src="assets/img/can.jpg" />
+                          <img src="./public/img/can.jpg" />
                         </div>
                       </div>
                       <h6>Farmart</h6>
@@ -640,7 +677,7 @@ export const About = () => {
                     <div className="slide-item1">
                       <div className="blog-box01 ">
                         <div className="blog-img ">
-                          <img src="assets/img/milk.jpg" />
+                          <img src="./public/img/milk.jpg" />
                         </div>
                       </div>
                       <h6>Farmart</h6>

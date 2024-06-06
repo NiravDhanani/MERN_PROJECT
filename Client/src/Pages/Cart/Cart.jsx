@@ -1,5 +1,6 @@
 import { Footer } from "../../Components/Footer/Footer";
 import { Header } from "../../Components/Header/Header";
+import './Cart.css'
 
 export const Cart = () => {
   return (
@@ -38,9 +39,8 @@ export const Cart = () => {
                       <div className="table d-flex ">
                         <div className="tab-img ">
                           <img
-                            src="assets/img/11.png"
+                            src="./public/img/11.png"
                             className="img-fluid"
-                            
                           />
                         </div>
                         <div className="name">
@@ -114,7 +114,7 @@ export const Cart = () => {
                       <div className="table d-flex ">
                         <div className="tab-img ">
                           <img
-                            src="assets/img/13.png"
+                            src="./public/img/13.png"
                             className="img-fluid"
                             atl
                           />
@@ -193,7 +193,7 @@ export const Cart = () => {
                       <div className="table d-flex ">
                         <div className="tab-img ">
                           <img
-                            src="assets/img/12.png"
+                            src="./public/img/12.png"
                             className="img-fluid"
                             atl
                           />
@@ -310,8 +310,8 @@ export const Cart = () => {
                     </div>
                     <div className="btn-3">
                       <button className="return">
-                        <a href="#">
-                          <i className="ri-arrow-left-line" /> &nbsp;Return To
+                        <a href="#" className="text-decoration-none text-dark">
+                           &nbsp;Return To
                           Shopping
                         </a>{" "}
                       </button>

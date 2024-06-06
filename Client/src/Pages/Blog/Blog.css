@@ -1,0 +1,218 @@
+
+.cart-page-head01 {
+    padding: 20px 0;
+  }
+  .cart-page-head01 .otp-page-head {
+    background-color: #F8F8F8;
+  }
+  .cart-page-head01 .otp-page-head .otp1 {
+    padding: 25px 0;
+  }
+  .cart-page-head01 .otp-page-head .otp1 h4 {
+    font-size: 20px;
+    font-weight: 800;
+  }
+  .cart-page-head01 .otp-page-head .otp1 span a,
+  .cart-page-head01 .otp-page-head .otp1 span i,
+  .cart-page-head01 .otp-page-head .otp1 span p {
+    font-size: 16px;
+    color: #222222;
+    margin: 0;
+  }
+
+  
+.left-sidebar-box {
+    position: sticky;
+    top: 0;
+  }
+  .left-sidebar-box .left-search-box .search-box input {
+    background-color: #F8F8F8;
+  }
+  .left-sidebar-box .left-accordion-box {
+    padding: 20px 0;
+  }
+  .left-sidebar-box .left-accordion-box .accordion-item {
+    background-color: #F8F8F8 !important;
+    padding: 20px 0;
+    margin: 20px 0;
+  }
+  .left-sidebar-box .left-accordion-box .accordion-item .accordion-header {
+    background-color: #F8F8F8 !important;
+  }
+  .left-sidebar-box .left-accordion-box .accordion-item .accordion-header .accordion-button {
+    background-color: #F8F8F8 !important;
+    color: black !important;
+    font-weight: 600;
+  }
+  .left-sidebar-box .left-accordion-box .accordion-item .accordion-collapse .accordion-body .recent-box {
+    padding: 10px 0;
+  }
+  .left-sidebar-box .left-accordion-box .accordion-item .accordion-collapse .accordion-body .recent-box img {
+    width: 110px;
+    height: 70px;
+  }
+  .left-sidebar-box .left-accordion-box .accordion-item .accordion-collapse .accordion-body .recent-box .recent-detail a h5 {
+    font-size: 16px;
+  }
+  .left-sidebar-box .left-accordion-box .accordion-item .accordion-collapse .accordion-body .recent-box .recent-detail h6 {
+    color: #4a5568;
+    font-size: 14px;
+  }
+  .left-sidebar-box .left-accordion-box .accordion-item .accordion-collapse .accordion-body .recent-detail h5 {
+    padding-left: 10px;
+  }
+  .left-sidebar-box .left-accordion-box .accordion-item .accordion-collapse .accordion-body .recent-detail h6 {
+    padding-left: 10px;
+  }
+  .left-sidebar-box .left-accordion-box .accordion-item .accordion-collapse .accordion-body .category-list-box ul li {
+    padding: 10px 15px;
+  }
+  .left-sidebar-box .left-accordion-box .accordion-item .accordion-collapse .accordion-body .category-list-box ul li a .category-name h5 {
+    font-size: 15px;
+  }
+  .left-sidebar-box .left-accordion-box .accordion-item .accordion-collapse .accordion-body .category-list-box ul li a .category-name span {
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 7px 12px;
+    background-color: #0da487;
+  }
+  .left-sidebar-box .left-accordion-box .accordion-item .accordion-collapse .accordion-body .product-tags-box ul li {
+    padding: 7px;
+  }
+  .left-sidebar-box .left-accordion-box .accordion-item .accordion-collapse .accordion-body .product-tags-box ul li a {
+    background-color: #ffffff;
+    padding: 7px 10px;
+  }
+  .left-sidebar-box .left-accordion-box .accordion-item .accordion-collapse .accordion-body .product-list .offer-product a img {
+    width: 90px;
+    height: 95px;
+    padding: 10px 15px;
+  }
+  .left-sidebar-box .left-accordion-box .accordion-item .accordion-collapse .accordion-body .product-list .offer-detail {
+    padding: 10px 0 10px 15px;
+    border-bottom: 1px dashed #ececec;
+  }
+  .left-sidebar-box .left-accordion-box .accordion-item .accordion-collapse .accordion-body .product-list .offer-detail a h6 {
+    font-size: 14px;
+    color: #222222;
+  }
+  .left-sidebar-box .left-accordion-box .accordion-item .accordion-collapse .accordion-body .product-list .offer-detail span {
+    font-size: 14px;
+    color: #4a5568;
+  }
+  .left-sidebar-box .left-accordion-box .accordion-item .accordion-collapse .accordion-body .product-list .offer-detail h6 {
+    color: #0da487;
+    font-size: 14px;
+  }
+  
+.blog-details {
+    padding: 50px 0;
+  }
+  .blog-details .blog-title h6 {
+    color: #0da487;
+    font-size: 22px;
+  }
+  .blog-details .blog-title h3 {
+    font-size: 38px;
+    position: relative;
+  }
+  .blog-details .blog-title h3::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    bottom: -7px;
+    left: 24%;
+    background-color: #ffa53b;
+  }
+  .blog-details .blog-box {
+    padding: 20px;
+  }
+  .blog-details .blog-box .blog-box01 {
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .blog-details .blog-box .blog-box01 .blog-img img {
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+    transition: all 0.5s;
+  }
+  .blog-details .blog-box .blog-box01 .blog-img img:hover {
+    transform: scale(1.2) rotate(9deg);
+  }
+  .blog-details .blog-box h6 {
+    padding: 10px 0 0 0;
+    font-size: 14px;
+    color: #4a5568;
+  }
+  .blog-details .blog-box h4 {
+    font-size: 18px;
+    transition: all 0.5;
+  }
+  .blog-details .blog-box h4:hover {
+    color: #0da487;
+  }
+  .blog-grid-box .blog-image {
+    overflow: hidden;
+  }
+  .blog-grid-box .blog-image #img-blog-list {
+    width: 700px;
+  }
+  .blog-grid-box .blog-image img {
+    transition: all 0.5s;
+  }
+  .blog-grid-box .blog-image img:hover {
+    transform: rotate(4deg) scale(1.1);
+  }
+  .blog-grid-box .blog-content {
+    padding: 0 25px 25px;
+  }
+  .blog-grid-box .blog-content .blog-title {
+    gap: 15px;
+    font-size: 14px;
+  }
+  .blog-grid-box .blog-content .blog-title span i {
+    width: 16px;
+    height: 16px;
+  }
+  .blog-grid-box .blog-content a {
+    color: black;
+  }
+  .blog-grid-box .blog-content a h3 {
+    margin: 10px 0 6px;
+    font-weight: 600;
+    line-height: 1.5;
+    overflow: hidden;
+    font-size: 18px;
+    transition: all 0.5s;
+    color: #222222;
+  }
+  .blog-grid-box .blog-content button {
+    border: none;
+    background: rgba(13, 164, 134, 0.3098039216);
+    display: flex;
+    border-radius: 5px;
+    padding: 10px 22px;
+    font-size: 14px;
+    transition: all 0.5s;
+    margin: 10px 0 0 0;
+  }
+  .blog-grid-box .blog-content button a {
+    color: #0da487;
+    transition: all 0.5s;
+  }
+  .blog-grid-box .blog-content button:hover {
+    background: #0da486;
+  }
+  .blog-grid-box .blog-content button:hover a {
+    color: white;
+  }
+  
+  .check-span {
+    color: #222222;
+    margin-right: 4px;
+  }
+  

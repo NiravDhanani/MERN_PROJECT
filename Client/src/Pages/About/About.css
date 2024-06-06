@@ -1,0 +1,278 @@
+
+.fresh-vegetable {
+    padding: 30px 0;
+  }
+  .fresh-vegetable .img-section {
+    overflow: hidden;
+  }
+  .fresh-vegetable .img-section .fresh-img01 {
+    overflow: hidden;
+  }
+  .fresh-vegetable .img-section .fresh-img01 img {
+    width: 360px;
+    height: 500px;
+    transition: all 0.5s;
+    overflow: hidden;
+  }
+  .fresh-vegetable .img-section .fresh-img01 img:hover {
+    transform: scale(1.05);
+  }
+  .fresh-vegetable .fresh-content {
+    padding: 30px 0;
+  }
+  .fresh-vegetable .fresh-content h4 {
+    font-size: 18px;
+  }
+  .fresh-vegetable .fresh-content h2 {
+    font-size: 42px;
+    width: 70%;
+  }
+  .fresh-vegetable .delivery-pera {
+    padding: 20px 0 0 0;
+  }
+  .fresh-vegetable .delivery-pera p {
+    color: #4a5568;
+    font-size: 15px;
+  }
+  .fresh-vegetable .delivery-pera ul li .delivery-box img {
+    width: 38px;
+    padding: 5px;
+  }
+  .fresh-vegetable .delivery-pera ul li .delivery-box h5 {
+    font-size: 16px;
+    color: #4a5568;
+    padding: 5px;
+  }
+  
+  .what-we-do {
+    padding: 50px 0;
+    background-color: #F8F8F8;
+  }
+  .what-we-do .what-title h6 {
+    color: #0da487;
+    font-size: 22px;
+  }
+  .what-we-do .what-title h3 {
+    font-size: 38px;
+    position: relative;
+  }
+  .what-we-do .what-title h3::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    bottom: -7px;
+    left: 24%;
+    background-color: #ffa53b;
+  }
+  .what-we-do .client-cotent {
+    padding: 40px 0;
+  }
+  .what-we-do .client-cotent .client-data {
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    position: relative;
+  }
+  .what-we-do .client-cotent .client-data .cliant-icon {
+    font-size: 60px;
+    color: #0da487;
+    padding: 10px;
+  }
+  .what-we-do .client-cotent .client-data h2 {
+    font-size: 70px;
+    color: #4a5568;
+    opacity: 0.2;
+    position: absolute;
+    top: 10px;
+    right: 22px;
+    transition: all 0.5s;
+  }
+  .what-we-do .client-cotent .client-data h2:hover {
+    transform: translateX(-10px);
+    opacity: 0.4;
+  }
+  .what-we-do .client-cotent .client-data h4 {
+    padding: 10px 0;
+  }
+  .what-we-do .client-cotent .client-data h4:hover {
+    color: #0da487;
+  }
+  
+  .our-team2 {
+    padding: 30px 0;
+  }
+  .our-team2 .team {
+    padding: 0 0 20px 0;
+  }
+  .our-team2 .team h6 {
+    color: #0da487;
+    font-size: 22px;
+  }
+  .our-team2 .team h3 {
+    font-size: 38px;
+    position: relative;
+  }
+  .our-team2 .team h3::before {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 2px;
+    bottom: -7px;
+    left: 40%;
+    background-color: #ffa53b;
+  }
+  .our-team2 .team-member .team-box {
+    padding: 10px;
+  }
+  .our-team2 .team-member .team-box .team-img {
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  .our-team2 .team-member .team-box .team-img img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    filter: grayscale(1);
+    transition: all 0.5s;
+  }
+  .our-team2 .team-member .team-box .team-img img:hover {
+    filter: grayscale(0);
+    transform: scale(1.05);
+  }
+  .our-team2 .team-member .team-box .team-name h4 {
+    color: #4a5568;
+    font-size: 16px;
+  }
+  .our-team2 .team-member .team-box .team-name p {
+    color: #4a5568;
+    font-size: 15px;
+    padding: 0 30px;
+  }
+  .our-team2 .team-member .team-box .team-name ul {
+    align-items: center;
+  }
+  .our-team2 .team-member .team-box .team-name ul li {
+    padding: 5px;
+  }
+  .our-team2 .team-member .team-box .team-name ul li i {
+    font-size: 26px;
+    padding: 5px;
+    background-color: #EDEDED;
+    border-radius: 7px;
+  }
+  .our-team2 .team-member .team-box .team-name ul li #fb {
+    color: #4267B2;
+    transition: all 0.5s;
+  }
+  .our-team2 .team-member .team-box .team-name ul li #fb:hover {
+    color: #ffffff;
+    background-color: #4267B2;
+  }
+  .our-team2 .team-member .team-box .team-name ul li #pin {
+    color: #c8232c;
+    transition: all 0.5s;
+  }
+  .our-team2 .team-member .team-box .team-name ul li #pin:hover {
+    color: #ffffff;
+    background-color: #c8232c;
+  }
+  .our-team2 .team-member .team-box .team-name ul li #twit {
+    color: #00acee;
+    transition: all 0.5s;
+  }
+  .our-team2 .team-member .team-box .team-name ul li #twit:hover {
+    color: #ffffff;
+    background-color: #00acee;
+  }
+  .our-team2 .team-member .team-box .team-name ul li #insta {
+    color: #F56040;
+    transition: all 0.5s;
+  }
+  .our-team2 .team-member .team-box .team-name ul li #insta:hover {
+    color: #ffffff;
+    background-color: #F56040;
+  }
+  
+  .people-review {
+    background-color: #F8F8F8;
+    padding: 50px 0;
+  }
+  .people-review .review-title h6 {
+    color: #0da487;
+    font-size: 22px;
+  }
+  .people-review .review-title h3 {
+    font-size: 38px;
+    position: relative;
+  }
+  .people-review .review-title h3::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    bottom: -7px;
+    left: 24%;
+    background-color: #ffa53b;
+  }
+  .people-review .review-member {
+    padding: 20px;
+  }
+  .people-review .review-member .review-box {
+    width: 480px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .people-review .review-member .review-box .client-data .cliant-icon {
+    color: #ffb321;
+  }
+  .people-review .review-member .review-box .client-data h3 {
+    font-size: 20px;
+  }
+  .people-review .review-member .review-box .client-data p {
+    font-size: 15px;
+    color: #4a5568;
+    padding: 10px 0;
+  }
+  .people-review .review-member .review-box .client-data .img-name {
+    position: relative;
+    overflow: hidden;
+  }
+  .people-review .review-member .review-box .client-data .img-name img {
+    width: 75px;
+    height: 75px;
+    border-radius: 8px;
+  }
+  .people-review .review-member .review-box .client-data .img-name .name01 {
+    padding-left: 10px;
+  }
+  .people-review .review-member .review-box .client-data .img-name .name01 h4 {
+    color: #0da487;
+    font-size: 16px;
+  }
+  .people-review .review-member .review-box .client-data .img-name .name01 h6 {
+    color: #4a5568;
+    font-size: 14px;
+  }
+  .people-review .review-member .review-box .client-data .img-name .coma-img i {
+    font-size: 90px;
+    position: absolute;
+    right: -16px;
+    bottom: -45px;
+    color: #4a5568;
+    opacity: 0.1;
+    transform: rotate(45deg);
+    transition: all 1s;
+  }
+  .people-review .review-member .review-box .client-data .img-name .coma-img i:hover {
+    transform: translateX(-20px) scale(1.03) rotate(10deg);
+    color: #0da487;
+    opacity: 0.5;
+    bottom: -35px;
+  }
+  
