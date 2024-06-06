@@ -72,22 +72,22 @@ const deleteCategory = async (req, res) => {
   }
 };
 
-const editCategory = async (req, res) => {
-  try {
-    let id = req.query.id;
-    let single = await Category.findById(id);
-    return res.status(200).send({
-      success: true,
-      message: "Category ready to edit",
-      single,
-    });
-  } catch (err) {
-    return res.status(503).send({
-      success: false,
-      message: " category id not found",
-    });
-  }
-};
+// const editCategory = async (req, res) => {
+//   try {
+//     let id = req.query.id;
+//     let single = await Category.findById(id);
+//     return res.status(200).send({
+//       success: true,
+//       message: "Category ready to edit",
+//       single,
+//     });
+//   } catch (err) {
+//     return res.status(503).send({
+//       success: false,
+//       message: " category id not found",
+//     });
+//   }
+// };
 
 const updateCategory = async (req, res) => {
   try {
@@ -99,14 +99,16 @@ const updateCategory = async (req, res) => {
       let image = await cloudinary.uploader.upload(req.file.path);
       await Category.findByIdAndUpdate(id, {
         category: req.body.category,
-        cat_icon: image.secure_url,
+        cat_icon: image.secure_url,  
         public_id: image.public_id,
       });
       return res.status(200).send({
         success: true,
         message: "category successfully update",
       });
-    } else {
+    } 
+    
+    else {
       await Category.findByIdAndUpdate(id, {
         category: req.body.category,
         cat_icon: single.secure_url,
@@ -116,9 +118,9 @@ const updateCategory = async (req, res) => {
         success: true,
         message: "category successfully update",
       });
-    }
 
-    return res.send(single);
+
+    }
   } catch (err) {
     return res.status(503).send({
       success: false,
@@ -131,6 +133,6 @@ module.exports = {
   CreaterCategory,
   viewCategory,
   deleteCategory,
-  editCategory,
+  // editCategory,
   updateCategory,
 };

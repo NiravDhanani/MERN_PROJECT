@@ -19,6 +19,7 @@ app.use(express.json());
 
 app.use("/v1/Api", require("./routes/RegisterRoute"));
 app.use("/v1/Api/Category", require("./routes/CategoryRoutes"));
+app.use("/v1/Api/product",require('./routes/ProductRoute'))
 app.listen(port, (err) => {
   if (err) {
     console.log(err);
