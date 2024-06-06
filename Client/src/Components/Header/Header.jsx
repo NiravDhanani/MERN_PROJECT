@@ -15,7 +15,7 @@ import { FiPhoneCall } from "react-icons/fi";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { BsCartPlus } from "react-icons/bs";
 import Badge from "react-bootstrap/Badge";
-import { CgProfile } from "react-icons/cg";
+import { CgProfile } from "react-icons/cg"; 
 import { BiSolidEditAlt } from "react-icons/bi";
 import { IoSettingsOutline } from "react-icons/io5";
 import { IoIosHelpCircleOutline } from "react-icons/io";
