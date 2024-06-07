@@ -23,7 +23,6 @@ import { RiLogoutBoxLine } from "react-icons/ri";
 import CloseButton from "react-bootstrap/CloseButton";
 import "./Header.css";
 // import { useLoginAuth } from "../../Context/LoginContext";
-import { useState } from "react";
 import { FaRegUserCircle } from "react-icons/fa";
 
 export const Header = () => {
@@ -163,7 +162,7 @@ let localToken = JSON.parse(localStorage.getItem("Login"));
       {/* navigation header start  */}
 
       {/* // logincode */}
-      <Navbar expand="lg" className="bg-body-tertiary">
+      <Navbar expand="lg" className="bg-body-tertiary navHeader">
         <Container>
           <Navbar.Brand as={Link} to={"/"}>
             <img

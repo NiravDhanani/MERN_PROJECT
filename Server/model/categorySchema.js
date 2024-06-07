@@ -5,13 +5,6 @@ const CatData = mongoose.Schema({
         type: String,
         reuire : true 
     },
-    cat_icon : {
-        type : String,
-    },
-    public_id : {
-        type : String,
-        required : true
-    }
 }) 
 
 const categorydata = mongoose.model('category',CatData);

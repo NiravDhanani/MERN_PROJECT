@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import { SocialReducer } from "./reducer";
+import { FreshMart } from "./reducer";
 
 export const Rootuser = combineReducers({ 
-    SocialReducer 
+    FreshMart 
 });

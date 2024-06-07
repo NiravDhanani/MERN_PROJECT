@@ -1,18 +1,22 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer, toast } from "react-toastify";
 import "bootstrap/dist/js/bootstrap.bundle.js";
-import { BrowserRouter, Navigate, Route, Routes, useNavigate } from "react-router-dom";
+import { BrowserRouter,Route, Routes } from "react-router-dom";
 import { Home } from "./Pages/Home/Home";
-import { Dashboard } from "./Pages/Dashboard/Dashboard";
+
 import { Cart } from "./Pages/Cart/Cart";
 import { About } from "./Pages/About/About";
 import { Register } from "./Pages/Register/Register";
 import { Login } from "./Pages/Login/Login";
 import { Blog } from "./Pages/Blog/Blog";
 import { ProtectedRoutes } from "./Utility/ProtectedRoutes";
+import { Dashboard } from "./Pages/Dashboard/Dashboard/Dashboard";
+import { Category } from "./Pages/Dashboard/Category/Category";
+import { Product } from "./Pages/Dashboard/Product/Product";
+import { UserPage } from "./Pages/Dashboard/User/UserPage";
+
 
 function App() {
   const [userRole, setUserRole] = useState("");
@@ -57,10 +61,16 @@ function App() {
           <Route path="/login" element={<Login />}></Route>
           <Route path="/blog" element={<Blog />}></Route>
           <Route element={<ProtectedRoutes />}>
-            {userRole === "admin" ? (
+          <Route path="/cart" element={<Cart />}></Route>
+
+            {userRole === "admin" && (
               <Route path="/dashboard" element={<Dashboard />} />
-            ) : ( <Route path="*" element={<Navigate to={'/'} />} />)}
-            <Route path="/cart" element={<Cart />}></Route>
+              )}
+            <Route path="/user" element={<UserPage />} />
+            <Route path="/category" element={<Category/>} />
+            <Route path="/product" element={<Product />} />
+
+            
           </Route>
         </Routes>
       </BrowserRouter>
