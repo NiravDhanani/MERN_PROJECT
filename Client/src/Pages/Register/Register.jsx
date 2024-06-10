@@ -6,8 +6,12 @@ import { Link, useNavigate } from "react-router-dom";
 import 'react-toastify/dist/ReactToastify.css';
 import "./Register.css";
 import { Register_User } from "../../redux/action/action";
+import { signInWithPopup } from "firebase/auth";
+import { googleAuthProvider, auth } from "../../Utility/GoogleAuth"; 
+import useAuth from "../../Utility/createContext";
     
 export const Register = () => {
+  const [gauth, setAuth] = useAuth();
   const [name,setName] = useState("")
   const [email,setEmail] = useState("")
   const [password,setPassword] = useState("")
@@ -15,6 +19,18 @@ export const Register = () => {
 
   const navigate = useNavigate()
   const dispatch = useDispatch()
+
+  
+  const authLogin = async () => {
+    try {
+      const result = await signInWithPopup(auth, googleAuthProvider);
+      const user = result.user;
+      setAuth({ ...authState, token: user.accessToken });
+      navigate("/"); // Navigate to a different route after successful login
+    } catch (error) {
+      toast.error("Error with Google Sign In");
+    }
+  };
 
   const RegisterFormhandler = async (e) => {
     e.preventDefault();
@@ -146,7 +162,7 @@ export const Register = () => {
                           </div>
                           <div className="google ">
                             <h6 className="text-center ">OR</h6>
-                            <div className="google-img d-flex justify-content-center">
+                            <div className="google-img d-flex justify-content-center" onClick={()=>authLogin()}>
                               <img src="./public/img/google.png" alt="google"/>
                               <h4>Log In With Google</h4>
                             </div>

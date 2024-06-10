@@ -12,11 +12,11 @@ export const FreshMart = (state = initialState, action) => {
         ...state,
         register: action.payload,
       };
-    case "CREATE_CATEGORY":
-      return {
-        ...state,
-        Category: action.payload,
-      };
+    // case "CREATE_CATEGORY":
+    //   return {
+    //     ...state,
+    //     Category: action.payload,
+    //   };
     case "VIEW_CATEGORY":
       return {
         ...state,
