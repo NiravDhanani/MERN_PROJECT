@@ -72,6 +72,7 @@ export const Login_User = (obj, login, setLogin, navigate) => {
   };
 };
 
+// category section
 let localData = JSON.parse(localStorage.getItem("Login"));
 const token = localData?.token;
 
@@ -91,12 +92,9 @@ export const CreateCategory = (category) => {
       );
 
       if (response.ok) {
-        let data = await response.json();
+        await response.json();
         toast.success("Category Added Successfully!");
-        dispatch({
-          type: "CREATE_CATEGORY",
-          payload: data,
-        });
+        dispatch(CategoryView());
       } else {
         let errorData = await response.json();
         toast.error(`Error: ${errorData.message}`);
@@ -108,12 +106,23 @@ export const CreateCategory = (category) => {
   };
 };
 
-export const CategoryView = (data) => {
+export const CategoryView = () => {
   return async (dispatch) => {
     try {
+      let response = await fetch(
+        "http://localhost:8222/v1/Api/Category/viewcategory",
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+      let data = await response.json();
       dispatch({
         type: "VIEW_CATEGORY",
-        payload: data,
+        payload: data.data,
       });
     } catch (err) {
       toast.error(`Error: ${err.message}`);
@@ -137,6 +146,7 @@ export const DeleteCategory = (id) => {
       );
       if (response.ok) {
         const data = await response.json();
+
         toast.success("Category deleted successfully!");
 
         dispatch({
@@ -155,20 +165,22 @@ export const DeleteCategory = (id) => {
 export const EditCategory = (id) => {
   return async (dispatch) => {
     try {
-      let response = await fetch(`http://localhost:8222/v1/Api/Category/editCategory?id=${id}`,{
-        method : "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-      })
-      if(response.ok){
-        let data = await response.json()
+      let response = await fetch(
+        `http://localhost:8222/v1/Api/Category/editCategory?id=${id}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+      if (response.ok) {
+        let data = await response.json();
         dispatch({
-          type : "EDIT_CATEGORY",
-          payload : data.single
-        })
-
+          type: "EDIT_CATEGORY",
+          payload: data.single,
+        });
       }
     } catch (err) {
       toast.error(err.message);
@@ -177,29 +189,85 @@ export const EditCategory = (id) => {
   };
 };
 
-export const UpdateCategory = ({editId,category}) => {
+export const UpdateCategory = ({ editId, category }) => {
   return async (dispatch) => {
     try {
-      let response = await fetch(`http://localhost:8222/v1/Api/Category/updateCategory?id=${editId}`,{
-        method : "PUT",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body : JSON.stringify({category})
-      })
-      if(response.ok){
-        let data = await response.json()
+      let response = await fetch(
+        `http://localhost:8222/v1/Api/Category/updateCategory?id=${editId}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({ category }),
+        }
+      );
+      if (response.ok) {
+        let data = await response.json();
         toast.success("Category updated successfully!");
-        dispatch({
-          type : "UpdateCategory",
-          payload : data
-        })
-        return data
+        dispatch(CategoryView());
+        return data;
       }
     } catch (err) {
       toast.error(err.message);
       console.log(err.message);
     }
   };
-}
+};
+
+// product section
+
+export const ProductView = () => {
+  return async (dispatch) => {
+    let response = await fetch(
+      `http://localhost:8222/v1/Api/product/ViewProduct`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+    const data = await response.json();
+    dispatch({
+      type: "PRODUCT_VIEW",
+      payload: data.data,
+    });
+  };
+};
+
+export const ProductCreate = (formData) => { // Change the argument name to formData
+  return async (dispatch) => {
+    try {
+      let response = await fetch(
+        `http://localhost:8222/v1/Api/product/createProduct`,
+        {
+          method: "POST",
+          headers: {
+            // Remove "Content-Type" header since it's automatically set for FormData
+            Authorization: `Bearer ${token}`,
+          },
+          body: formData, // Pass formData directly
+        }
+      );
+
+      console.log(formData);
+      console.log(response);
+
+      if (!response.ok) {
+        let errorMessage = `Error: ${response.status} ${response.statusText}`;
+        toast.error(errorMessage);
+        console.error(errorMessage);
+        return;
+      }
+
+      let data = await response.json();
+      console.log("Product created successfully:", data);
+      toast.success("Product created successfully!");
+      dispatch(ProductView()); // Fetch the updated product list
+    } catch (err) {
+      toast.error("An error occurred while creating the product.");
+      console.error("Error:", err.message);
+    }
+  };
+};

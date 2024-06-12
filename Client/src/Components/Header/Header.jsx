@@ -187,9 +187,9 @@ let localToken = JSON.parse(localStorage.getItem("Login"));
               <Nav.Link as={Link} to={"/blog"} className="navitem">
                 Blog
               </Nav.Link>
-              {localToken?.user?.role == "admin" ? ( <Nav.Link as={Link} to={"/dashboard"} className="navitem">
+              {localToken?.user?.role == "admin" && ( <Nav.Link as={Link} to={"/dashboard"} className="navitem">
                 Admin
-              </Nav.Link>): ""}
+              </Nav.Link>)}
              
 
               <NavDropdown

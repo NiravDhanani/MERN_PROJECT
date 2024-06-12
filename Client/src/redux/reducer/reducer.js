@@ -3,20 +3,17 @@ const initialState = {
   Loginuser: [],
   Category: [],
   single: {},
+  Product : [],
 };
 
 export const FreshMart = (state = initialState, action) => {
   switch (action.type) {
     case "REGISTER_USER":
       return {
-        ...state,
+        ...state, 
         register: action.payload,
       };
-    // case "CREATE_CATEGORY":
-    //   return {
-    //     ...state,
-    //     Category: action.payload,
-    //   };
+
     case "VIEW_CATEGORY":
       return {
         ...state,
@@ -35,13 +32,20 @@ export const FreshMart = (state = initialState, action) => {
         single: action.payload,
       };
     }
-    case "UpdateCategory": {
+    case "UPDATE_CATEGORY": {
       return {
         ...state,
         Category: state.Category.map((item) =>
           item._id === action.payload._id ? action.payload : item
         ),
       };
+    }
+
+    case "PRODUCT_VIEW" : {
+      return {
+        ...state,
+        Product : action.payload
+      }
     }
     default:
       return state;

@@ -6,11 +6,12 @@ const uploadProduct = multer({
   storage: multer.diskStorage({}),
 }).single("product_image");
 
+const verifyToken = require(`../config/auth`)
 const ProductController = require("../controller/ProductCotroller");
 
-route.post("/createProduct", uploadProduct, ProductController.CreateProduct);
-route.get("/ViewProduct", ProductController.ViewProduct);
-route.delete("/DeleteProduct", ProductController.DeleteProduct);
-route.put("/UpdateProduct",uploadProduct,ProductController.UpdateProduct);
+route.post("/createProduct",verifyToken,uploadProduct,ProductController.CreateProduct);
+route.get("/ViewProduct",verifyToken,ProductController.ViewProduct);
+route.delete("/DeleteProduct",verifyToken,ProductController.DeleteProduct);
+route.put("/UpdateProduct",verifyToken,uploadProduct,ProductController.UpdateProduct);
 
 module.exports = route;

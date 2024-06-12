@@ -40,7 +40,7 @@ export const Login = () => {
       const result = await signInWithPopup(auth, googleAuthProvider);
       const user = result.user;
       setAuth({ ...gauth, token: user.accessToken });
-      navigate("/"); // Navigate to a different route after successful login
+      navigate("/"); 
     } catch (error) {
       toast.error("Error with Google Sign In");
     }

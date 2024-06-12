@@ -32,25 +32,6 @@ export const Category = () => {
   let record = useSelector((state) => state.FreshMart.Category);
   let single = useSelector((state) => state.FreshMart.single);
 
-  let localData = JSON.parse(localStorage.getItem("Login"));
-  const token = localData?.token;
-
-  const View = async () => {
-    let response = await fetch(
-      "http://localhost:8222/v1/Api/Category/viewcategory",
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
-    let res = await response.json();
-    let data = res.data;
-    dispatch(CategoryView(data));
-  };
-
   const Edithandler = (id) => {
     handleShow();
     dispatch(EditCategory(id));
@@ -71,7 +52,7 @@ export const Category = () => {
   };
 
   useEffect(() => {
-    View();
+    dispatch(CategoryView());
   }, []);
 
   useEffect(() => {
@@ -201,5 +182,3 @@ export const Category = () => {
     </>
   );
 };
-
-
